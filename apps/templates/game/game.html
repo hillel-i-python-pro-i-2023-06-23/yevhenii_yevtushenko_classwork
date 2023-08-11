@@ -1,0 +1,16 @@
+{% extends 'game/base.html' %}
+
+    {% block content %}
+        <h1>Game</h1>
+        <p>Question: {{ question }}</p>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Send answer">
+        </form>
+
+
+        <p>Game content</p>
+    {% endblock %}
+```
